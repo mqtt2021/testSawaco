@@ -1,0 +1,313 @@
+
+.App{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+        .menu{
+          display: none;
+        }
+        .header{
+                background-color: rgb(9, 132, 227);  
+                width: 15%;
+                .divNavigation{
+                  width: 100%;
+                  .NavigationItem{
+                          width: 100%;
+                          height: 50px;
+                          display: flex;
+                          justify-content: space-around;
+                          font-size: 18px;
+                          color: aliceblue;
+                          align-items: center;
+                          cursor: pointer; 
+                          &:hover{
+                            background-color:rgb(166, 138, 230);
+                          }
+                          
+
+                          .NavigationItemIcon{
+                            display: flex;
+                            align-items: center;
+                            column-gap: 10px;
+                            .slideBarItemIconText{
+                             display: flex;
+                             align-items: center;
+                            }
+                          }
+                }
+                .NavigationItemWarning{
+                 
+                  .divAmountOfWarning{
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                      .amountOfWarning{
+                        top: 10px;
+                        right: 30px;
+                        position: absolute;
+                        background-color: red;
+                        width: 25px;
+                        height: 25px;
+                        font-size: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                      }
+                  }
+
+                }
+
+
+                .positionWarning{
+                  height: 50px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: aliceblue;
+                  font-size: 18px;
+                  
+                  cursor: pointer;
+                  &:hover{
+                    background-color:rgb(166, 138, 230);
+                  }
+                }   
+                .divBatteryPercent{
+                  .batteryPercent{
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+                    column-gap: 10px;
+                    font-size: 15px;
+                    color: aliceblue;
+                    align-items: center;
+                    cursor: pointer; 
+                    &:hover{
+                      background-color:rgb(166, 138, 230);
+                    }
+                  }
+                }
+
+                }
+                
+                
+                
+                
+        }
+
+        .divMap{
+            width: 84%;
+            position: relative;
+            .divBtnSimu{
+              position: absolute;
+              z-index: 3000;
+              top: 0;
+              right: 0;
+              display: flex;
+              flex-direction: column;
+              
+              .divBtnSimuItem{
+                  margin-bottom: 10px;
+                  width: 100px;
+                  height: 30px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: rgb(166, 168, 169);
+              }
+            }
+            // .btnWarning{
+            //   width: 100px;
+            //   height: 30px;
+            //   display: flex;
+            //   justify-content: center;
+            //   align-items: center;
+            //   position: absolute;
+            //   z-index: 3000;
+            //   top: 0;
+            //   right: 0;
+            //   background-color: rgb(166, 168, 169);
+            // }
+            // .btnGPS{
+            //   width: 100px;   
+            //   height: 30px;
+            //   display: flex;
+            //   justify-content: center;
+            //   align-items: center;
+            //   position: absolute;
+            //   z-index: 3000;             
+            //   right: 5;
+            //   top: 0;
+            //   background-color: rgb(166, 168, 169);
+            // }
+          .leaflet-container {
+            height: 100%;
+            width: 100%; 
+            .leaflet-popup-content{
+                   .div-popup{
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                  
+                   .name{
+                    font-size: 17px;
+                    font-weight: 700;
+                    
+                    text-align: center;
+                   }
+
+                   .battery{
+                        display: flex;
+                        justify-content: space-between;
+                    .iconbattery{
+                      font-size: 30px;
+                    }
+                    .textbattery{
+                      margin-top: 5px;
+                      margin-left: 20px;
+                      font-size: 17px;
+                      font-weight: 700;
+                    }
+                   }
+                 }
+               }
+        }
+        }
+
+        @media (max-width: 768px) {
+          display: block; // xóa flex của App
+          .header{
+            width: 100%;
+            height: 8%;
+            position: relative;
+
+            .divNavigation{
+              display: none;
+            }
+
+            .menu{
+                display: block;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                font-size: 30px;
+                position: relative;
+                .amountOfWarning{
+                  left: 30px;
+                  position: absolute;
+                  background-color: red;
+                  width: 25px;
+                  height: 25px;
+                  font-size: 20px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 50%;
+                }
+            }  
+
+          .divNavigationMobile{
+            width: 50%;
+            z-index: 4000;       
+            position: absolute;
+            background-color: rgb(9, 132, 227);   ;
+            .NavigationItem{
+                    height: 50px;
+                    display: flex;
+                    justify-content: space-around;
+                    font-size: 18px;
+                    color: aliceblue;
+                    align-items: center;
+                    cursor: pointer; 
+                    &:hover{
+                      background-color:rgb(166, 138, 230);
+                    }
+                    
+
+                    .NavigationItemIcon{
+                      display: flex;
+                      align-items: center;
+                      column-gap: 10px;
+                      .slideBarItemIconText{
+                       display: flex;
+                       align-items: center;
+                      }
+                    }
+          }
+          .NavigationItemWarning{
+           
+            .divAmountOfWarning{
+              height: 100%;
+              position: relative;
+              display: flex;
+              align-items: center;
+                .amountOfWarning{
+                  top: 10px;
+                  right: 22px;
+                  position: absolute;
+                  background-color: red;
+                  width: 25px;
+                  height: 25px;
+                  font-size: 20px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 50%;
+                }
+            }
+
+          }
+
+
+          .positionWarning{
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: aliceblue;
+            font-size: 18px;
+            
+            cursor: pointer;
+            &:hover{
+              background-color:rgb(166, 138, 230);
+            }
+          }   
+          .divBatteryPercent{
+            .batteryPercent{
+              height: 30px;
+              display: flex;
+              justify-content: center;
+              margin-top: 10px;
+              column-gap: 10px;
+              font-size: 15px;
+              color: aliceblue;
+              align-items: center;
+              cursor: pointer; 
+              &:hover{
+                background-color:rgb(166, 138, 230);
+              }
+            }
+          }
+
+          }
+
+
+
+
+          }
+          
+         
+          
+          .divMap{
+            
+            width: 100%;
+            height:90%;             
+          }
+        }
+}
